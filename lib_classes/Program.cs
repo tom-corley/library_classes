@@ -6,6 +6,8 @@ public class Program
 
         // Creating Library Object
         Library myLibrary = new Library();
+        System.Console.WriteLine("Creating Library...");
+        System.Console.WriteLine(myLibrary);
 
         // Creating three books and adding them to the library
         Book the_hobbit = new Book("The Hobbit", "J.R.R. Tolkien");
@@ -14,6 +16,7 @@ public class Program
         myLibrary.AddBook(the_hobbit);
         myLibrary.AddBook(nineteen_eighty_four);
         myLibrary.AddBook(hunger_games);
+        System.Console.WriteLine("\nAdded Books.");
         System.Console.WriteLine(myLibrary);
 
         // New Patrons Dan and Tony
@@ -21,6 +24,8 @@ public class Program
         Patron tony = new Patron("Tony");
         myLibrary.AddPatron(dan);
         myLibrary.AddPatron(tony);
+        System.Console.WriteLine("\nAdded Patrons.");
+        System.Console.WriteLine(myLibrary);
 
         // Dan borrows "The Hobbit" and returns it
         myLibrary.BorrowBook(dan, the_hobbit);
@@ -29,8 +34,10 @@ public class Program
         // Tony borrows "1984"", fails to return it and is then removed as a Patron
         myLibrary.BorrowBook(tony, nineteen_eighty_four);
         myLibrary.RemovePatron(tony);
+        System.Console.WriteLine("\nTony's account after borrowing 1984:");
         System.Console.WriteLine(tony);
 
+        System.Console.WriteLine("\nSimulated exceptions (see code):");
         // Dan, trying to be a good samaritan, returns 1984 for Tony, this is not allowed
         try
         {
@@ -65,7 +72,6 @@ public class Program
         {
             System.Console.WriteLine($"Exception: {e.Message}");
         }
-        System.Console.WriteLine(myLibrary);
 
         // Dan wants "The Bible", but cannot find a copy
         try

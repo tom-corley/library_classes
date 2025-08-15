@@ -61,11 +61,19 @@ public class Library
 
     public void BorrowBook(Patron patron, Book book)
     {
+        if (!Patrons.Contains(patron))
+        {
+            throw new Exception("Patron is not registered at this library");
+        }
         patron.BorrowBook(book); // Exception thrown within here for unavailable book
     }
 
     public void ReturnBook(Patron patron, Book book)
     {
+        if (!Patrons.Contains(patron))
+        {
+            throw new Exception("Patron is not registered at this library");
+        }
         patron.ReturnBook(book); // // Exception thrown within here for available book
     }
 
