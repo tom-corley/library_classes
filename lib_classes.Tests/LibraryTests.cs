@@ -101,6 +101,17 @@ namespace lib_classes.Tests
         }
 
         [Test]
+        public void BorrowBook_Refuses_Patron_Not_In_Library()
+        {
+            Library testLib = new Library();
+            Patron testPatron = new Patron("Dean");
+            Book testBook = new Book("The Bible", "Larry");
+            testLib.AddBook(testBook);
+
+            Assert.Throws<Exception>(() => testLib.BorrowBook(testPatron, testBook));
+        }
+
+        [Test]
         public void BorrowBook_Adds_Book_To_Patron_Borrowed()
         {
             Library testLib = new Library();
@@ -115,7 +126,7 @@ namespace lib_classes.Tests
         }
 
         [Test]
-        public void BorrowBook_Removes_Book_From_Patron_Borrowed()
+        public void ReturnBook_Removes_Book_From_Patron_Borrowed()
         {
             Library testLib = new Library();
             Patron testPatron = new Patron("Dean");
@@ -127,6 +138,21 @@ namespace lib_classes.Tests
             testLib.ReturnBook(testPatron, testBook);
 
             Assert.That(testPatron.BorrowedBooks, Does.Not.Contain(testBook));
+        }
+
+        [Test]
+        public void ReturnBook_Refuses_Patron_Not_In_Library()
+        {
+            Library testLib = new Library();
+            Patron testPatron = new Patron("Dean");
+            testLib.AddPatron(testPatron);
+            Book testBook = new Book("The Bible", "Larry");
+            testLib.AddBook(testBook);
+
+            testLib.BorrowBook(testPatron, testBook);
+            testLib.RemovePatron(testPatron);
+
+            Assert.Throws<Exception>(() => testLib.ReturnBook(testPatron, testBook));
         }
     }
 }

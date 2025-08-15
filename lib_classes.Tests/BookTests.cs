@@ -26,6 +26,7 @@ namespace lib_classes.Tests
 
             Assert.That(testBook.IsAvailable, Is.True);
         }
+
         [Test]
         public void Borrow_Throws_If_Unavailable()
         {
@@ -52,6 +53,14 @@ namespace lib_classes.Tests
             testBook.Borrow();
             testBook.Return();
             Assert.That(testBook.IsAvailable, Is.True);
+        }
+
+        [Test]
+        public void Return_Throws_If_Available()
+        {
+            Book testBook = new Book("The Bible", "Larry");
+            
+            Assert.Throws<Exception>(testBook.Return);
         }
 
         [Test]
