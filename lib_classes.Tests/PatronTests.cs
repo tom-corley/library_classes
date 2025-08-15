@@ -46,5 +46,17 @@ namespace lib_classes.Tests
             Book testBook = new Book("The Bible", "Larry");
             Assert.Throws<Exception>(() => testPatron.ReturnBook(testBook));
         }
+
+        [Test]
+        public void Patron_Converts_To_String_Correctly()
+        {
+            Patron testPatron = new Patron("Dean");
+            Book testBook = new Book("The Bible", "Larry");
+            testPatron.BorrowBook(testBook);
+
+            string res = testPatron.ToString();
+
+            Assert.That(res, Is.EqualTo("Dean - Borrowed Books (1):\n\t\tThe Bible - Larry"));
+        }
     }
 }

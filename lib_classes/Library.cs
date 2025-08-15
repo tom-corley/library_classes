@@ -1,3 +1,5 @@
+using System.Text;
+
 public class Library
 {
     private List<Book> Books;
@@ -59,11 +61,29 @@ public class Library
 
     public void BorrowBook(Patron patron, Book book)
     {
-        patron.BorrowBook(book);
+        patron.BorrowBook(book); // Exception thrown within here for unavailable book
     }
 
     public void ReturnBook(Patron patron, Book book)
     {
-        patron.ReturnBook(book);
+        patron.ReturnBook(book); // // Exception thrown within here for available book
+    }
+
+    public override string ToString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append("\n=== LIBRARY ===");
+        sb.Append($"\nBooks ({Books.Count}):");
+        foreach (Book b in Books)
+        {
+            sb.Append($"\n\t{b}");
+        }
+        sb.Append($"\nPatrons ({Patrons.Count}):");
+        foreach (Patron p in Patrons)
+        {
+            sb.Append($"\n\t{p}");
+        }
+        sb.Append("\n");
+        return sb.ToString();
     }
 }

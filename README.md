@@ -5,7 +5,7 @@ This small project provides three classes used to simulate a library system:
 - `Patron`: Domain model for a library customer, each instance has a name, and the ability to borrow and return a specific book.
 - `Library`: Class for a library, has a list of each of the following two classes to manage customers and inventory. Implements a variety of utility methods for finding books, adding and removing books and patrons, and seeing the current books or patrons. 
 
-It also contains a file `Program.cs`, which provides example code showing how the above classes can be used to simulate a library.
+It also contains a file `Program.cs`, which provides example code showing how the above classes can be used to simulate a library. This gives example function calls, and string output making clear the state of the classes after operations have taken place.
 
 ###  Use Guide
 To download the game onto your local machine:
@@ -18,6 +18,10 @@ To run the example code:
 
 To run tests:
 1. Run `dotnet test` from the root directory of the project
+
+### Implementation
+
+Exceptions are thrown in the `Book` and `Patron` classes to handle attempts to borrow books which are unavailable, or return those which are already avaialable, or have been borrowed by another Patron. It is reccommended that `try/catch` statements are used when doing these operations if you are unsure whether a book is available.
 
 ### Testing
 

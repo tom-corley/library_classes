@@ -18,7 +18,7 @@ namespace lib_classes.Tests
 
             Assert.That(testBook.Author, Is.EqualTo("Larry"));
         }
-        
+
         [Test]
         public void Book_Constructor_Sets_Available()
         {
@@ -52,6 +52,15 @@ namespace lib_classes.Tests
             testBook.Borrow();
             testBook.Return();
             Assert.That(testBook.IsAvailable, Is.True);
+        }
+
+        [Test]
+        public void Converts_To_String_Correctly()
+        {
+            Book testBook = new Book("The Bible", "Larry");
+            string res = testBook.ToString();
+
+            Assert.That(res, Is.EqualTo("The Bible - Larry"));
         }
     }
 }

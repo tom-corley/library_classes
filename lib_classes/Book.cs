@@ -22,6 +22,15 @@ public class Book
 
     public void Return()
     {
+        if (IsAvailable)
+        {
+            throw new Exception("Book has not been borrowed");
+        }
         IsAvailable = true;
+    }
+
+    public override string ToString()
+    {
+        return Title+" - "+Author;
     }
 }
