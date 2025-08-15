@@ -26,4 +26,5 @@ The test directory consists of four test files containing unit tests which test 
 - `PatronTests.cs`
 - `LibaryTests.cs`
 - `ProgramTests.cs`
+
 These altogether achieve a test coverage of the project files well above 90%.

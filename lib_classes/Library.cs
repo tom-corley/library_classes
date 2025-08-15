@@ -42,6 +42,11 @@ public class Library
         return Books;
     }
 
+    public List<Patron> GetAllPatrons()
+    {
+        return Patrons;
+    }
+
     public void AddPatron(Patron patron)
     {
         Patrons.Add(patron);

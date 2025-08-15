@@ -14,11 +14,12 @@ namespace lib_classes.Tests
         }
 
         [Test]
-        public void Library_Constructor_Initialises_With_No_Books()
+        public void Library_Constructor_Initialises_With_No_Books_Or_Patrons()
         {
             Library testLib = new Library();
 
             Assert.That(testLib.GetAllBooks().Count, Is.Zero);
+            Assert.That(testLib.GetAllPatrons().Count, Is.Zero);
         }
 
         [Test]
@@ -78,7 +79,54 @@ namespace lib_classes.Tests
             Assert.Throws<Exception>(() => testLib.GetBookByTitle("Not The Bible"));
         }
 
-        //[Test]
-        //public void AddPatron_Adds_Patron
+        [Test]
+        public void AddPatron_Adds_Patron()
+        {
+            Library testLib = new Library();
+            Patron testPatron = new Patron("Dean");
+            testLib.AddPatron(testPatron);
+
+            Assert.That(testLib.GetAllPatrons, Does.Contain(testPatron));
+        }
+
+        [Test]
+        public void RemovePatron_Removes_Patron()
+        {
+            Library testLib = new Library();
+            Patron testPatron = new Patron("Dean");
+            testLib.AddPatron(testPatron);
+            testLib.RemovePatron(testPatron);
+
+            Assert.That(testLib.GetAllPatrons, Does.Not.Contain(testPatron));
+        }
+
+        [Test]
+        public void BorrowBook_Adds_Book_To_Patron_Borrowed()
+        {
+            Library testLib = new Library();
+            Patron testPatron = new Patron("Dean");
+            testLib.AddPatron(testPatron);
+            Book testBook = new Book("The Bible", "Larry");
+            testLib.AddBook(testBook);
+
+            testLib.BorrowBook(testPatron, testBook);
+
+            Assert.That(testPatron.BorrowedBooks, Does.Contain(testBook));
+        }
+
+        [Test]
+        public void BorrowBook_Removes_Book_From_Patron_Borrowed()
+        {
+            Library testLib = new Library();
+            Patron testPatron = new Patron("Dean");
+            testLib.AddPatron(testPatron);
+            Book testBook = new Book("The Bible", "Larry");
+            testLib.AddBook(testBook);
+
+            testLib.BorrowBook(testPatron, testBook);
+            testLib.ReturnBook(testPatron, testBook);
+
+            Assert.That(testPatron.BorrowedBooks, Does.Not.Contain(testBook));
+        }
     }
 }
