@@ -12,3 +12,4 @@ C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug
 C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\lib_classes.pdb
 C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\lib_classes.genruntimeconfig.cache
 C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\ref\lib_classes.dll
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\lib_classes.sourcelink.json

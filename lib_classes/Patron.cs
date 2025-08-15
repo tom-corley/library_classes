@@ -21,10 +21,6 @@ public class Patron
         {
             throw new Exception("Attempting to return a book you have not borrowed");
         }
-        if (book.IsAvailable)
-        {
-            throw new Exception("You are trying to return a book that was not checked out");
-        }
         book.Return();
         BorrowedBooks.Remove(book);
     }

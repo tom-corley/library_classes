@@ -346,6 +346,16 @@
             "related": ".xml"
           }
         }
+      },
+      "lib_classes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/lib_classes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/lib_classes.dll": {}
+        }
       }
     }
   },
@@ -793,6 +803,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "lib_classes/1.0.0": {
+      "type": "project",
+      "path": "../lib_classes/lib_classes.csproj",
+      "msbuildProject": "../lib_classes/lib_classes.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -801,7 +816,8 @@
       "NUnit >= 4.2.2",
       "NUnit.Analyzers >= 4.4.0",
       "NUnit3TestAdapter >= 4.6.0",
-      "coverlet.collector >= 6.0.2"
+      "coverlet.collector >= 6.0.2",
+      "lib_classes >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -828,7 +844,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\tomco\\Documents\\library_assesment\\library_classes\\lib_classes\\lib_classes.csproj": {
+              "projectPath": "C:\\Users\\tomco\\Documents\\library_assesment\\library_classes\\lib_classes\\lib_classes.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
