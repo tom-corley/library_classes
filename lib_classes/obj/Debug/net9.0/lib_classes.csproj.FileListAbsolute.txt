@@ -1,0 +1,14 @@
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\bin\Debug\net9.0\lib_classes.exe
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\bin\Debug\net9.0\lib_classes.deps.json
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\bin\Debug\net9.0\lib_classes.runtimeconfig.json
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\bin\Debug\net9.0\lib_classes.dll
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\bin\Debug\net9.0\lib_classes.pdb
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\lib_classes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\lib_classes.AssemblyInfoInputs.cache
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\lib_classes.AssemblyInfo.cs
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\lib_classes.csproj.CoreCompileInputs.cache
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\lib_classes.dll
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\refint\lib_classes.dll
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\lib_classes.pdb
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\lib_classes.genruntimeconfig.cache
+C:\Users\tomco\Documents\library_assesment\library_classes\lib_classes\obj\Debug\net9.0\ref\lib_classes.dll
